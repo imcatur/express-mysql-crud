@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Crud - Express - Mysql - <%= title %></title>
+	<link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
+</head>
+<body>
+<div class="container" style="max-width: 640px;">
+	<h1 class="text-center"><%= title %></h1>
+	<form action="/tambah_siswa" method="post">
+		<div class="form-group form-row">
+			<div class="col">
+				<input id="nama" type="text" name="nama" class="form-control form-control-sm" placeholder="Masukan nama siswa">
+			</div>
+		</div>
+		<div class="form-group form-row">
+			<div class="col">
+				<input type="text" name="kelas" class="form-control form-control-sm" placeholder="Masukan kelas siswa">
+			</div>
+		</div>
+		<div class="form-group form-row">
+			<div class="col">
+				<select name="jenis_kelamin" class="form-control form-control-sm">
+					<option selected="" disabled="">Pilih jenis kelamin</option>
+					<option>pria</option>
+					<option>wanita</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group form-row">
+			<div class="col">
+				<textarea style="height: 200px;" name="alamat" class="form-control form-control-sm" placeholder="Masukan alamat"></textarea>
+			</div>
+		</div>
+		<div class="form-group form-row">
+			<div class="col">
+				<a href="/" class="btn btn-sm btn-danger">Batal</a>
+				<button type="submit" class="btn btn-sm btn-primary">Simpan</button>
+			</div>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+	setTimeout(function(){
+		document.getElementById('nama').focus();
+	}, 100);
+</script>
+</body>
+</html>
